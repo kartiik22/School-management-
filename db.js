@@ -2,14 +2,15 @@ const mysql = require('mysql2');
 
 // Create a connection pool
 const pool = mysql.createPool({
-    host: 'pti1i.h.filess.io',
+    host: 'c5lnu.h.filess.io',
     port: 61002,
-    user: 'schoolapiclone_belonghas',
-    password: 'b5e8146be86ab1004c32f5ad564d13c25a25c24e',
-    database: 'schoolapiclone_belonghas',
+    user: 'a_askrestdry',
+    password: 'ffa0eacbc6d2a42d1ddd2da4ae3d9a830c8aaa62',
+    database: 'a_askrestdry',
     waitForConnections: true, // Wait for a connection if none are available
-    connectionLimit: 5, // Maximum number of connections in the pool
+    connectionLimit: 3000, // Reduce the pool size to 3
     queueLimit: 0 // Unlimited queueing for connection requests
+
 });
 
 // Get a connection from the pool and check/create the 'schools' table
